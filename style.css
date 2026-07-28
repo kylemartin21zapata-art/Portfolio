@@ -43,8 +43,8 @@ header {
   justify-content: space-between;
   align-items: center;
 
-  padding: 0 70px;
-  height: 85px;
+  padding: 0 80px;
+  height: 70px;
 
   position: fixed;
   top: 0;
@@ -59,19 +59,24 @@ header {
 .header-content {
   display: flex;
   justify-content: space-between;
+  margin-left: 10px;
 }
 
 img {
   -webkit-user-drag: none;
   user-select: none;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
 .km-logo {
-  width: 60px;
-  height: 60px;
-  border-radius: 13px;
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
 
-  margin-top: 15px;
+  margin-top: 16px;
   margin-right: 17px;
 
   -webkit-user-select: none;
@@ -81,10 +86,9 @@ img {
 }
 
 .header-content h2 {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial;
   margin-top: 3 6px;
-  font-size: 32px;
-  font-weight: 700;
+  font-size: 28px;
   color: #f5f5f5;
   display: inline-block;
 
@@ -95,7 +99,7 @@ img {
 }
 
 .nav-links {
-  margin-right: 60px;
+  margin-right: 50px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -107,7 +111,7 @@ img {
   position: relative;
   text-decoration: none;
   color: #f5f5f5;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
   margin-left: 20px;
   margin-right: 30px;
@@ -152,27 +156,32 @@ section.home {
 
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 .home-content {
   color: #f5f5f5;
   margin-left: 50px;
   margin-right: 50px;
 
+  -webkit-user-drag: none;
+  user-select: none;
+
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  user-select: none;
 }
 
 .home-content h1 {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 46px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 48px;
+
+  margin-top: 90px;
   padding-left: 70px;
 }
 
 .home-content p {
   font-family: "Inter", sans-serif;
-  font-size: 21px;
+  font-size: 20px;
   color: #d6d6d6;
   line-height: 1.5;
 
@@ -190,6 +199,9 @@ section.home {
 
   margin-top: 30px;
   margin-left: 160px;
+  margin-bottom: 50px;
+
+  flex-wrap: wrap;
 }
 
 .contact-item {
@@ -200,21 +212,34 @@ section.home {
   text-decoration: none;
   color: #d6d6d6;
 
-  transition: 0.3s;
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
 }
 
 .contact-item:hover {
   color: rgb(176, 92, 233);
+  transform: scale(1.05);
 }
 
 .contact-item img {
   width: 36px;
   height: 36px;
   border-radius: 50%;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.contact-item:hover img {
+  transform: scale(1.12);
+
+  box-shadow: 0 0 15px rgba(176, 92, 233, 0.35);
 }
 
 .contact-item span {
-  font-size: 20px;
+  font-size: 16px;
   font-family: "Inter", sans-serif;
 }
 
@@ -223,14 +248,81 @@ section.home {
   color: #d6d6d6;
   font-family: "Courier New", monospace;
 }
-.button-more {
-  position: absolute;
-  bottom: 100px;
-  left: 50%;
-  transform: translateX(-50%);
+
+@keyframes btnPulse {
+  0%,
+  82%,
+  100% {
+    box-shadow: 0 0 0 rgba(176, 92, 233, 0);
+    border-color: rgb(154, 152, 155);
+  }
+
+  86%,
+  94% {
+    box-shadow: 0 0 18px rgba(176, 92, 233, 0.35);
+    border-color: rgb(176, 92, 233);
+  }
+
+  90%,
+  98% {
+    box-shadow: 0 0 0 rgba(176, 92, 233, 0);
+    border-color: rgb(154, 152, 155);
+  }
 }
 
-.button-more img {
-  height: 50px;
-  width: 50px;
+.btnmore {
+  display: inline-block;
+
+  padding: 14px 32px;
+
+  margin-left: 150px;
+  margin-top: 25px;
+
+  background: transparent;
+  color: #f5f5f5;
+
+  border: 1px solid rgb(154, 152, 155);
+  border-radius: 12px;
+
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+
+  text-decoration: none;
+  cursor: pointer;
+
+  animation: btnPulse 5s infinite;
+
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+.btnmore:hover {
+  animation: none;
+
+  transform: scale(1.05);
+
+  color: #fff;
+  background: rgba(176, 92, 233, 0.12);
+
+  border-color: rgb(176, 92, 233);
+
+  box-shadow: 0 0 20px rgba(176, 92, 233, 0.35);
+}
+
+.btnmore:active {
+  transform: scale(0.98);
+}
+
+.btnmore a {
+  text-decoration: none;
+  color: #d6d6d6;
+  font-family: Arial, Helvetica, sans-serif;
 }
