@@ -176,7 +176,7 @@ section.home {
   font-size: 48px;
 
   margin-top: 90px;
-  padding-left: 70px;
+  padding-left: 100px;
 }
 
 .home-content p {
@@ -251,22 +251,27 @@ section.home {
 
 @keyframes btnPulse {
   0%,
-  82%,
+  80%,
   100% {
-    box-shadow: 0 0 0 rgba(176, 92, 233, 0);
-    border-color: rgb(154, 152, 155);
+    transform: scale(1);
   }
 
-  86%,
-  94% {
-    box-shadow: 0 0 18px rgba(176, 92, 233, 0.35);
-    border-color: rgb(176, 92, 233);
+  /* First zoom */
+  84% {
+    transform: scale(1.05);
   }
 
-  90%,
-  98% {
-    box-shadow: 0 0 0 rgba(176, 92, 233, 0);
-    border-color: rgb(154, 152, 155);
+  86% {
+    transform: scale(1);
+  }
+
+  /* Second zoom */
+  90% {
+    transform: scale(1.05);
+  }
+
+  92% {
+    transform: scale(1);
   }
 }
 
@@ -286,12 +291,10 @@ section.home {
 
   font-family: "Inter", sans-serif;
   font-size: 18px;
-  font-weight: 600;
 
-  text-decoration: none;
   cursor: pointer;
 
-  animation: btnPulse 5s infinite;
+  animation: btnPulse 5s ease-in-out infinite;
 
   transition:
     transform 0.3s ease,
@@ -300,8 +303,7 @@ section.home {
     border-color 0.3s ease,
     box-shadow 0.3s ease;
 
-  backface-visibility: hidden;
-  -webkit-font-smoothing: antialiased;
+  will-change: transform;
 }
 
 .btnmore:hover {
@@ -315,14 +317,4 @@ section.home {
   border-color: rgb(176, 92, 233);
 
   box-shadow: 0 0 20px rgba(176, 92, 233, 0.35);
-}
-
-.btnmore:active {
-  transform: scale(0.98);
-}
-
-.btnmore a {
-  text-decoration: none;
-  color: #d6d6d6;
-  font-family: Arial, Helvetica, sans-serif;
 }
