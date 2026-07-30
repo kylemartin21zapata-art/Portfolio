@@ -447,13 +447,14 @@ section.home {
 
 .projects {
   min-height: 90vh;
-  scroll-margin-top: 80px;
+  scroll-margin-top: 70px;
   text-align: justify;
   font-family: Arial, Helvetica, sans-serif;
 
   margin-top: 50px;
   margin-right: 100px;
   margin-left: 100px;
+  margin-bottom: 100px;
 
   -webkit-user-drag: none;
   -webkit-user-select: none;
