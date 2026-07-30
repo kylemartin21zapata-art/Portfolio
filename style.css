@@ -20,7 +20,13 @@ html {
 }
 
 body {
-  background-color: rgb(10, 10, 10);
+  background-color: #0a0a0a;
+
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+
+  background-size: 50px 50px;
   margin: 0;
   padding: 0;
 
@@ -112,7 +118,7 @@ img {
   position: relative;
   text-decoration: none;
   color: #f5f5f5;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
   margin-left: 20px;
   margin-right: 30px;
@@ -281,6 +287,11 @@ section.home {
   font-size: 34px;
   color: #d6d6d6;
   font-family: "Courier New", monospace;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 @keyframes btnPulse {
@@ -345,7 +356,7 @@ section.home {
 
   transform: scale(1.05);
 
-  color: #fff;
+  color: #f5f5f5;
   background: rgba(176, 92, 233, 0.12);
 
   border-color: rgb(176, 92, 233);
@@ -368,14 +379,6 @@ section.home {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-
-  background:
-    radial-gradient(
-      circle at top right,
-      rgba(176, 92, 233, 0.08),
-      transparent 35%
-    ),
-    rgb(10, 10, 10);
 }
 
 .pfp {
@@ -388,6 +391,9 @@ section.home {
 .pfp img {
   width: 100%;
   max-width: 430px;
+  margin-top: 20px;
+
+  border-radius: 5px;
 
   height: auto;
 
@@ -412,18 +418,15 @@ section.home {
   display: inline-block;
 
   color: rgb(176, 92, 233);
-
   font-size: 15px;
-
   font-weight: 700;
 
   letter-spacing: 3px;
-
   margin-bottom: 18px;
 }
 
 .about-content h2 {
-  color: #fff;
+  color: #f5f5f5;
 
   font-size: 44px;
 
@@ -433,11 +436,105 @@ section.home {
 }
 
 .about-content p {
-  color: #cfcfcf;
+  color: #d6d6d6;
 
   font-size: 18px;
 
   line-height: 1.9;
 
   text-align: justify;
+}
+
+.projects {
+  min-height: 90vh;
+  scroll-margin-top: 80px;
+  text-align: justify;
+  font-family: Arial, Helvetica, sans-serif;
+
+  margin-top: 50px;
+  margin-right: 100px;
+  margin-left: 100px;
+
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+
+  user-select: none;
+}
+
+.project-background {
+  background-color: rgb(19, 19, 19);
+
+  border-radius: 10px;
+}
+
+.project-content {
+  display: flex;
+
+  gap: 30px;
+
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+}
+
+.projects h2 {
+  text-align: center;
+  font-size: 40px;
+
+  background-color: rgb(26, 26, 26);
+  padding: 16px;
+
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.projects a {
+  text-decoration: none;
+}
+
+.projects article {
+  background-color: rgb(26, 26, 26);
+
+  border: 1px solid rgb(41, 41, 41);
+  border-radius: 5px;
+  box-shadow: 0 0 18px rgb(0, 0, 0);
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.projects article:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 30px rgb(0, 0, 0);
+}
+
+.projects h5 {
+  color: #f5f5f5;
+  font-size: 20px;
+  margin-left: 15px;
+}
+
+.projects p {
+  color: #d6d6d6;
+  font-size: 15px;
+  line-height: 1.5;
+
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.footer-container {
+  background-color: rgb(15, 15, 15);
+}
+
+footer {
+  padding: 8px;
+  color: #d6d6d6;
+  font-size: 15px;
+  justify-content: center;
+  display: flex;
+  gap: 20px;
 }
