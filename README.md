@@ -1,8 +1,8 @@
-# Portfolio
+## Portfolio
 
 A personal portfolio website showcasing my skills, projects, and progress in web development. Built with a focus on clean design, responsiveness, and user-friendly experiences.
 
-# Technologies
+## Technologies
 
 - HTML
 - CSS
