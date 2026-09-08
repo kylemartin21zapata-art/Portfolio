@@ -110,13 +110,13 @@ header {
   width: 0;
   height: 3px;
 
-  background: blueviolet;
+  background: rgb(164, 71, 250);
 
   transition: width 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: blueviolet;
+  color: rgb(164, 71, 250);
   transform: translateY(-2px);
 }
 
@@ -160,7 +160,7 @@ header {
   height: auto;
   object-fit: cover;
 
-  border: 2px solid rgba(147, 51, 234, 0.4);
+  border: 3px solid rgba(147, 51, 234, 0.4);
   box-shadow: 0 0 18px rgba(147, 51, 234, 0.4);
 
   transition: transform 0.4s ease;
@@ -220,7 +220,7 @@ header {
   padding-left: 30px;
   padding-right: 30px;
 
-  border: 2px solid rgb(164, 71, 250);
+  border: 2px solid rgb(132, 1, 255);
   border-radius: 15px;
 
   bottom: -40px;
@@ -230,7 +230,7 @@ header {
 }
 
 .text-content button:hover {
-  transform: translateY(-2px);
+  transform: scale(1.08);
   box-shadow: 0 0 15px rgba(147, 51, 234, 0.4);
 }
 
@@ -239,7 +239,7 @@ header {
 }
 
 .btn-contact {
-  background-color: rgb(32, 16, 48);
+  background-color: rgb(132, 1, 255);
 }
 
 .btn-work {
