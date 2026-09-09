@@ -17,14 +17,14 @@ body {
 }
 
 header {
-  background: transparent;
+  background-color: rgba(137, 43, 226, 0);
 
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   padding: 0 80px;
-  height: 70px;
+  height: 60px;
 
   position: fixed;
   top: 0;
@@ -221,7 +221,7 @@ header {
   padding-right: 30px;
 
   border: 2px solid rgb(132, 1, 255);
-  border-radius: 15px;
+  border-radius: 8px;
 
   bottom: -40px;
   right: -28px;
@@ -250,6 +250,18 @@ header {
 .about-section {
   min-height: 90vh;
   scroll-margin-top: 70px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 90px;
+  padding: 50px 9% 100px;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .projects {
@@ -273,7 +285,6 @@ header {
 
 .project-background {
   background-color: rgb(19, 19, 19);
-
   border-radius: 10px;
 }
 
@@ -292,8 +303,9 @@ header {
   font-size: 40px;
 
   background-color: rgb(26, 26, 26);
-  padding: 16px;
+  padding: 15px;
 
+  border-bottom: 3px solid rgb(19, 19, 19);
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
